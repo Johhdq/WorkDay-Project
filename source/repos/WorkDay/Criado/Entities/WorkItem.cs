@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Criado.Entities
 {
-    class WorkItem
+    public class WorkItem
     {
         public string Description { get; set; }
         public int CodItem { get; set; }
