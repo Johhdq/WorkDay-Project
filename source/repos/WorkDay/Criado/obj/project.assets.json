@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Interfocus\\source\\repos\\Interface\\Ex_02_Criado\\Ex_02_Criado.csproj",
-      "projectName": "Ex_02_Criado",
-      "projectPath": "C:\\Users\\Interfocus\\source\\repos\\Interface\\Ex_02_Criado\\Ex_02_Criado.csproj",
+      "projectUniqueName": "C:\\Users\\Interfocus\\source\\repos\\WorkDay\\Criado\\Criado.csproj",
+      "projectName": "Criado",
+      "projectPath": "C:\\Users\\Interfocus\\source\\repos\\WorkDay\\Criado\\Criado.csproj",
       "packagesPath": "C:\\Users\\Interfocus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Interfocus\\source\\repos\\Interface\\Ex_02_Criado\\obj\\",
+      "outputPath": "C:\\Users\\Interfocus\\source\\repos\\WorkDay\\Criado\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Interfocus\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,0 +1,14 @@
+C:\Users\Interfocus\source\repos\WorkDay\Criado\bin\Debug\netcoreapp3.1\Criado.exe
+C:\Users\Interfocus\source\repos\WorkDay\Criado\bin\Debug\netcoreapp3.1\Criado.deps.json
+C:\Users\Interfocus\source\repos\WorkDay\Criado\bin\Debug\netcoreapp3.1\Criado.runtimeconfig.json
+C:\Users\Interfocus\source\repos\WorkDay\Criado\bin\Debug\netcoreapp3.1\Criado.runtimeconfig.dev.json
+C:\Users\Interfocus\source\repos\WorkDay\Criado\bin\Debug\netcoreapp3.1\Criado.dll
+C:\Users\Interfocus\source\repos\WorkDay\Criado\bin\Debug\netcoreapp3.1\Criado.pdb
+C:\Users\Interfocus\source\repos\WorkDay\Criado\obj\Debug\netcoreapp3.1\Criado.csproj.AssemblyReference.cache
+C:\Users\Interfocus\source\repos\WorkDay\Criado\obj\Debug\netcoreapp3.1\Criado.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Interfocus\source\repos\WorkDay\Criado\obj\Debug\netcoreapp3.1\Criado.AssemblyInfoInputs.cache
+C:\Users\Interfocus\source\repos\WorkDay\Criado\obj\Debug\netcoreapp3.1\Criado.AssemblyInfo.cs
+C:\Users\Interfocus\source\repos\WorkDay\Criado\obj\Debug\netcoreapp3.1\Criado.csproj.CoreCompileInputs.cache
+C:\Users\Interfocus\source\repos\WorkDay\Criado\obj\Debug\netcoreapp3.1\Criado.dll
+C:\Users\Interfocus\source\repos\WorkDay\Criado\obj\Debug\netcoreapp3.1\Criado.pdb
+C:\Users\Interfocus\source\repos\WorkDay\Criado\obj\Debug\netcoreapp3.1\Criado.genruntimeconfig.cache

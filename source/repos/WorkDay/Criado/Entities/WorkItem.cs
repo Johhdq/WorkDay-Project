@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Criado.Enums;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -8,13 +9,15 @@ namespace Criado.Entities
     {
         public string Description { get; set; }
         public int CodItem { get; set; }
-        public int Category { get; set; }
+        public WorkItemCategory Category { get; set; }
         public DateTime Start { get; set; }
         public DateTime Finish { get; set; }
 
-        public WorkItem(string description, DateTime start, DateTime finish)
+        public WorkItem(string description, int codItem, WorkItemCategory category, DateTime start, DateTime finish)
         {
             Description = description;
+            CodItem = codItem;
+            Category = category;
             Start = start;
             Finish = finish;
         }
@@ -55,7 +58,7 @@ namespace Criado.Entities
 
         public override string ToString()
         {
-            return "Category" + Category +  "Description >> " + Description + "; Start >> " + Start + "; Finish >> " + Finish
+            return "Category >> " + Category +  "Description >> " + Description + "; Start >> " + Start + "; Finish >> " + Finish
                 + "Work Time >> " + TotalTime();
         }
     }

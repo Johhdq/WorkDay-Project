@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Interfocus\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Interfocus\\.nuget\\packages"
+    ]
+  }
+}
