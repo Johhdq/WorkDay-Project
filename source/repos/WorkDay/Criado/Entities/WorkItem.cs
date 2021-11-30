@@ -1,7 +1,6 @@
 ﻿using Criado.Enums;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Criado.Entities
 {
@@ -39,27 +38,11 @@ namespace Criado.Entities
                 return (int)duration.Days;
             }
         }
-        public void RemoveItem(List<WorkItem> workItems, int codItem)
-        {
-            var item = workItems.Find(x => x.CodItem == codItem);
-            if (item != null)
-            {
-                workItems.Remove(item);
-            }
-        }
-        public void AddItem(List<WorkItem> workItems, WorkItem item)
-        {
-            var items = workItems.Find(x => x.CodItem == item.CodItem);
-            if (items == null)
-            {
-                workItems.Add(item);
-            }
-        }
 
         public override string ToString()
         {
-            return "Category >> " + Category +  "Description >> " + Description + "; Start >> " + Start + "; Finish >> " + Finish
-                + "Work Time >> " + TotalTime();
+            return "Category >> " + Category +  "; Description >> " + Description + "; Start >> " + Start + "; Finish >> " + Finish
+                + "; Work Time >> " + TotalTime();
         }
     }
 }

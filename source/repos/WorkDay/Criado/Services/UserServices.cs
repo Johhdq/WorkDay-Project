@@ -29,7 +29,6 @@ namespace Criado.Services
             }
             return false;
         }
-
         public void ListAllUsers(List<User> users)
         {
             foreach (var user in users)

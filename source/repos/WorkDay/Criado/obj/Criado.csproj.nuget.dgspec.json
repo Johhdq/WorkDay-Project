@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Interfocus\\source\\repos\\WorkDay\\Criado\\Criado.csproj": {}
+    "C:\\Users\\Interfocus\\source\\repos\\WorkDay-Project\\source\\repos\\WorkDay\\Criado\\Criado.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Interfocus\\source\\repos\\WorkDay\\Criado\\Criado.csproj": {
+    "C:\\Users\\Interfocus\\source\\repos\\WorkDay-Project\\source\\repos\\WorkDay\\Criado\\Criado.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Interfocus\\source\\repos\\WorkDay\\Criado\\Criado.csproj",
+        "projectUniqueName": "C:\\Users\\Interfocus\\source\\repos\\WorkDay-Project\\source\\repos\\WorkDay\\Criado\\Criado.csproj",
         "projectName": "Criado",
-        "projectPath": "C:\\Users\\Interfocus\\source\\repos\\WorkDay\\Criado\\Criado.csproj",
+        "projectPath": "C:\\Users\\Interfocus\\source\\repos\\WorkDay-Project\\source\\repos\\WorkDay\\Criado\\Criado.csproj",
         "packagesPath": "C:\\Users\\Interfocus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Interfocus\\source\\repos\\WorkDay\\Criado\\obj\\",
+        "outputPath": "C:\\Users\\Interfocus\\source\\repos\\WorkDay-Project\\source\\repos\\WorkDay\\Criado\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Interfocus\\AppData\\Roaming\\NuGet\\NuGet.Config",
