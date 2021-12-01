@@ -7,7 +7,7 @@ namespace Criado.Services
 {
     public class LoginService
     {
-        public User Login(string op, List<User> users)
+        public User LoginCad(string op, List<User> users)
         {
             User user = null;
             string nickName;

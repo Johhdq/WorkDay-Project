@@ -18,66 +18,15 @@ namespace Criado
 
             while (true)
             {
-                bool hasUser = false;
                 menu.InitialMenu();
-                User user = null;
                 Console.Write("\nOption: ");
                 string op = Console.ReadLine();
+                var login = new LoginService();
 
-                // Realizando login ou cadastro do usuário!
-                if (op == "1")
-                {
-                    Console.WriteLine("\nLOGIN");
-                    Console.Write("NickName: ");
-                    string nickName = Console.ReadLine();
-                    Console.Write("Password: ");
-                    string password = Console.ReadLine();
-
-                    var userVal = users.Find(x => x.NickName == nickName && x.Password == password);
-                    if (userVal == null)
-                    {
-                        Console.WriteLine("\nUser not registered!");
-                    }
-                    else
-                    {
-                        hasUser = true;
-                        user = userVal;
-                        Console.WriteLine("\nLogin successfully!");
-                    }
-                }
-                else if (op == "2")
-                {
-                    Console.WriteLine("\nREGISTER SCREEN");
-                    Console.Write("Name >> ");
-                    string name = Console.ReadLine();
-                    Console.Write("NickName >> ");
-                    string nickName = Console.ReadLine();
-                    Console.Write("Email >> ");
-                    string email = Console.ReadLine();
-                    Console.Write("Password >> ");
-                    string password = Console.ReadLine();
-
-                    var userVal = new User(name, nickName, email, password);
-                    var userServices = new UserServices(userVal);
-
-                    if (userServices.AddUser(users))
-                    {
-                        hasUser = true;
-                        user = userVal;
-                        Console.WriteLine("\nUser registered successfully");
-                    }
-                    else
-                    {
-                        Console.WriteLine($"\nUser already registered with this NickName: {nickName} ");
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("\nInvalid option!");
-                }
+                var user = login.LoginCad(op, users);
 
                 // Menu principal após o login ou cadastro >> Que pode ser modularizado para evitar poluição do código
-                if (hasUser)
+                if (user != null)
                 {
                     menu.MainMenu();
                     Console.Write("\nOption: ");
@@ -263,9 +212,7 @@ namespace Criado
                             default:
                                 break;
                         }
-                        
                     }
-
                 }
                 op = Console.ReadLine();
             }
