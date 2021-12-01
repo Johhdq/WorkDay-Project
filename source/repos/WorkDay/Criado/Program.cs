@@ -21,7 +21,7 @@ namespace Criado
                 menu.InitialMenu();
                 Console.Write("\nOption: ");
                 string op = Console.ReadLine();
-                var login = new LoginService();
+                var login = new LoginCadService();
 
                 var user = login.LoginCad(op, users);
 
@@ -217,9 +217,6 @@ namespace Criado
                 op = Console.ReadLine();
             }
         }
-
-        // Funções de Menu, que podem ser modularizadas também em outro arquivo?
-
     }
 }
 

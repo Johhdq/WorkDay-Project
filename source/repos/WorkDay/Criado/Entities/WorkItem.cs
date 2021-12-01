@@ -21,21 +21,21 @@ namespace Criado.Entities
             Finish = finish;
         }
 
-        public int TotalTime()
+        public string TotalTime()
         {
             TimeSpan duration = Finish.Subtract(Start);
 
             if (duration.TotalMinutes >= 60 && duration.TotalHours < 24)
             {
-                return (int)duration.TotalHours;
+                return $"{(int)duration.TotalHours} Hours and {(int)duration.TotalMinutes} Minutes"; 
             }
             else if (duration.TotalMinutes < 60)
             {
-                return (int)duration.TotalMinutes;
+                return $"{(int)duration.TotalMinutes} Minutes"; 
             }
             else
             {
-                return (int)duration.Days;
+                return $"{(int)duration.TotalDays} Days";
             }
         }
 

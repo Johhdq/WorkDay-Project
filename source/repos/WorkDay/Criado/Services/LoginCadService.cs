@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Criado.Services
 {
-    public class LoginService
+    public class LoginCadService
     {
         public User LoginCad(string op, List<User> users)
         {
