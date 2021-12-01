@@ -1,5 +1,6 @@
 ﻿using Criado.Entities;
 using Criado.Enums;
+using Criado.Menus;
 using Criado.Services;
 using System;
 using System.Collections.Generic;
@@ -13,11 +14,12 @@ namespace Criado
         static void Main(string[] args)
         {
             var users = new List<User>();
+            var menu = new Menu();
 
             while (true)
             {
                 bool hasUser = false;
-                InitialMenu();
+                menu.InitialMenu();
                 User user = null;
                 Console.Write("\nOption: ");
                 string op = Console.ReadLine();
@@ -77,19 +79,19 @@ namespace Criado
                 // Menu principal após o login ou cadastro >> Que pode ser modularizado para evitar poluição do código
                 if (hasUser)
                 {
-                    MainMenu();
+                    menu.MainMenu();
                     Console.Write("\nOption: ");
                     op = Console.ReadLine();
 
                     if (op == "1")
                     {
-                        UserMenu();
+                        menu.UserMenu();
                         Console.Write("\nOption: ");
                         op = Console.ReadLine();
 
                         if (op == "1")
                         {
-                            UserSubMenu();
+                            menu.UserSubMenu();
                             Console.Write("\nOption: ");
                             op = Console.ReadLine();
 
@@ -136,7 +138,7 @@ namespace Criado
                         Console.Write("Item cod >> ");
                         int codItem = int.Parse(Console.ReadLine());
 
-                        CategoryMenu();
+                        menu.CategoryMenu();
 
                         Console.Write("\nOption: ");
                         op = Console.ReadLine();
@@ -191,50 +193,85 @@ namespace Criado
                             Console.WriteLine($"There's no WorkItem with the followed code: {codItem}");
                         }
                     }
+                    else if (op == "5")
+                    {
+                        menu.ItemChangeMenu();
+                        Console.Write("Option: ");
+                        op = Console.ReadLine();
+
+                        Console.Write("Enter the CodItem >> ");
+                        int codItem = int.Parse(Console.ReadLine());
+                        var item = user.ReturnWorkItem(codItem);
+
+                        switch (op)
+                        {
+                            case "1":
+                                if (item != null)
+                                {
+                                    Console.Write("New Description >> ");
+                                }
+                                else
+                                {
+                                    Console.WriteLine($"There's no WorkItem with the followed code: {codItem}");
+                                }
+                                break;
+
+                            case "2":
+                                if (item != null)
+                                {
+
+                                    menu.CategoryMenu();
+                                    Console.Write("\nNew category >> ");
+                                    
+                                    try
+                                    {
+                                        var workItemCategory = (WorkItemCategory)Enum.Parse(typeof(WorkItemCategory), op);
+                                        item.Category = workItemCategory;
+                                    }
+                                    catch
+                                    {
+                                        throw new ArgumentException("Error! Invalid option!");
+                                    }
+                                }
+                                else
+                                {
+                                    throw new ArgumentException($"There's no WorkItem with the followed code: {codItem}");
+                                }
+                                break;
+
+                            case "3":
+                                if (item != null)
+                                {
+                                    try
+                                    {
+                                        Console.Write("\nNew Start >> ");
+                                        var start = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture);
+                                        Console.Write("New Finish >> ");
+                                        var finish = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture);
+                                    }
+                                    catch
+                                    {
+                                        throw new ArgumentException("Error! Dates with the wrong format!!");
+                                    }
+                                }
+                                else
+                                {
+                                    throw new ArgumentException($"There's no WorkItem with the followed code: {codItem}");
+                                }
+                                break;
+
+                            default:
+                                break;
+                        }
+                        
+                    }
+
                 }
                 op = Console.ReadLine();
             }
         }
 
         // Funções de Menu, que podem ser modularizadas também em outro arquivo?
-        static void CategoryMenu()
-        {
-            Console.WriteLine("CATEGORY");
-            Console.WriteLine(
-                "\n1. Health" +
-                "\n2. Fun" +
-                "\nWork");
-        }
-        static void InitialMenu()
-        {
-            Console.WriteLine(
-                "\n1. Enter with a user" +
-                "\n2. Register a user");
-        }
-        static void MainMenu()
-        {
-            Console.WriteLine(
-                "\n1. User settings" +
-                "\n2. Add a Work Item" +
-                "\n3. List all Work Itens" +
-                "\n4. Remove Item" +
-                "\n5. Change Item" +
-                "\nEnd");
-        }
-        static void UserMenu()
-        {
-            Console.WriteLine(
-                "\n1. Change a user" +
-                "\n2. Remove a user" +
-                "\n3. Show the user data" +
-                "\nEnd");
-        }
-        static void UserSubMenu()
-        {
-            Console.WriteLine(
-                "\n1. Change email" +
-                "\n2. Change password");
-        }
 
     }
 }

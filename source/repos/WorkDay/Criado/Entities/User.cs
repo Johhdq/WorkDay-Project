@@ -41,6 +41,15 @@ namespace Criado.Entities
             }
             return false;
         }
+        public WorkItem ReturnWorkItem(int codItem)
+        {
+            var item = WorkItems.Find(x => x.CodItem == codItem);
+            if (item != null)
+            {
+                return item;
+            }
+            return null;
+        }
         
         public override string ToString()
         {
